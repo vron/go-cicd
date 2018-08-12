@@ -8,9 +8,7 @@ RUN sudo apt-get update && \
     ./google-cloud-sdk/bin/gcloud components install -q cloud-datastore-emulator && \
     ./google-cloud-sdk/bin/gcloud components install -q beta && \
     ./google-cloud-sdk/bin/gcloud config set project test
-
-ADD run.sh run.sh
-
+ADD run.sh /run.sh
+RUN sudo chmod 777 /run.sh
 LABEL com.circleci.preserve-entrypoint=true
-
-ENTRYPOINT ./run.sh
+ENTRYPOINT ["/run.sh"]

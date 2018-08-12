@@ -2,4 +2,4 @@
 
 set -e
 
-./google-cloud-sdk/bin/gcloud beta emulators datastore start
+/go/google-cloud-sdk/bin/gcloud beta emulators datastore start
