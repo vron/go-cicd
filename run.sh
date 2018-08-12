@@ -2,4 +2,4 @@
 
 set -e
 
-nohup ./google-cloud-sdk/bin/gcloud beta emulators datastore start &
+./google-cloud-sdk/bin/gcloud beta emulators datastore start
